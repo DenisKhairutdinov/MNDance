@@ -1,0 +1,11 @@
+@mixin centering {
+  display: grid;
+  place-content: center;
+}
+
+@mixin header-font {
+  font-weight: 400;
+  font-size: 16rem;
+  line-height: 120%;
+  text-transform: uppercase;
+}
