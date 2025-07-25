@@ -1,0 +1,15 @@
+.sign-up-button {
+  @include centering;
+  @include header-font;
+
+  width: 175rem;
+  height: 44rem;
+  color: $white;
+  background-color: $red;
+  border-radius: 22rem;
+  cursor: pointer;
+
+  &--boldtext {
+    font-weight: 600;
+  }
+}
