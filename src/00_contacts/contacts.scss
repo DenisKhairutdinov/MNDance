@@ -7,6 +7,10 @@
   width: 144rem;
   height: 44rem;
   row-gap: 6rem;
+
+  &--lowtext {
+    text-transform: lowercase;
+  }
 }
 
 .contacts__tel,
@@ -14,10 +18,5 @@
   white-space: nowrap;
   text-decoration: underline;
   cursor: pointer;
-
-  //   text-underline-offset: 2rem;
-
-  &--lowtext {
-    text-transform: lowercase;
-  }
+  text-underline-offset: 2rem;
 }
