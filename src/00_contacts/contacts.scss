@@ -1,0 +1,23 @@
+.contacts {
+  @include header-font;
+
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: 144rem;
+  height: 44rem;
+  row-gap: 6rem;
+}
+
+.contacts__tel,
+.contacts__email {
+  white-space: nowrap;
+  text-decoration: underline;
+  cursor: pointer;
+
+  //   text-underline-offset: 2rem;
+
+  &--lowtext {
+    text-transform: lowercase;
+  }
+}
