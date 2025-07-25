@@ -1,0 +1,21 @@
+.socials {
+  display: flex;
+  flex-direction: row;
+  column-gap: 20rem;
+
+  &--in-header {
+    padding: 0 40rem;
+  }
+}
+
+.socials__link {
+  @include centering;
+
+  cursor: pointer;
+}
+
+.socials__icon {
+  display: block;
+  width: 44rem;
+  height: 44rem;
+}
