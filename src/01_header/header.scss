@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100rem;
+  padding: $headerPadding;
+  background-color: $white;
+}
+
+.header__logo {
+  width: 142rem;
+  height: 32rem;
+  cursor: pointer;
+}
+
+.header__menu {
+  @include header-font;
+
+  width: 1127rem;
+  padding-right: 227rem;
+  padding-left: 84rem;
+}
+
+.header__menu-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__menu-item {
+  @include centering;
+
+  height: 24rem;
+  padding: 0 16rem;
+  white-space: nowrap;
+  cursor: pointer;
+}
