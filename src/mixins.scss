@@ -9,3 +9,12 @@
   line-height: 120%;
   text-transform: uppercase;
 }
+
+@mixin hero-font {
+  font-weight: 800;
+  font-size: 200rem;
+  font-style: italic;
+  line-height: 100%;
+  letter-spacing: 200rem * 3 / 100;
+  text-transform: uppercase;
+}
