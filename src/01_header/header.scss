@@ -16,6 +16,10 @@
   width: 142rem;
   height: 32rem;
   cursor: pointer;
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .header__menu {
@@ -35,14 +39,78 @@
 .header__menu-item {
   @include centering;
 
+  position: relative;
   height: 24rem;
   padding: 0 16rem;
+  overflow: hidden;
   white-space: nowrap;
   border-radius: 12rem;
   cursor: pointer;
+  transition: transform $animationTime ease-in-out 100ms;
+
+  &::before {
+    position: absolute;
+    width: 0;
+    height: 24rem;
+    background-color: $red;
+    border-radius: 12rem;
+    transition: width $animationTime ease-in-out;
+    content: '';
+  }
+
+  &:hover::before {
+    width: 100%;
+  }
+
+  &::after {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 0;
+    height: 24rem;
+    padding-left: 16rem;
+    overflow: hidden;
+    color: $white;
+    transition: width $animationTime ease-in-out;
+    content: attr(data-text);
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 
   &--active {
-    color: $white;
-    background-color: $red;
+    position: relative;
+
+    // background-color: $red;
+    transform: translateY(-4rem);
+
+    &::before {
+      position: absolute;
+      width: var(--width);
+      height: 24rem;
+
+      // background-color: $darkgrey;
+      border-radius: 12rem;
+      transition: width $animationTime ease-in-out;
+      content: '';
+    }
+
+    &::after {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      width: var(--width);
+      height: 24rem;
+      padding-left: 16rem;
+      overflow: hidden;
+      color: $white;
+      transition: width $animationTime ease-in-out;
+      content: attr(data-text);
+    }
+  }
+
+  &:active {
+    opacity: 0.8;
   }
 }

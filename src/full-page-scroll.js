@@ -1,5 +1,6 @@
 'use strict';
 
+const root = document.documentElement;
 const pages = document.getElementById('main');
 const menu = document.getElementById('header__menu-list');
 const logo = document.getElementById('header__logo');
@@ -37,6 +38,7 @@ pages.addEventListener('wheel', function (e) {
   //зависимость страницы и элемента навигации
   if (scrollStep > 0 && scrollStep <= pages.children.length - 1) {
     menu.children[scrollStep - 1].classList.add('header__menu-item--active');
+    root.style.setProperty('--width', '100%');
   }
   for (let i = 0; i < menu.children.length; i++) {
     if (menu.children[scrollStep - 1] !== menu.children[i]) {

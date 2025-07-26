@@ -12,6 +12,14 @@
   @include centering;
 
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
 }
 
 .socials__icon {
