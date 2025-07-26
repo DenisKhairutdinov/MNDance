@@ -1,11 +1,15 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
-  height: 100rem;
+  height: 80rem;
   padding: $headerPadding;
   background-color: $white;
+  box-shadow: 0 1rem 8rem -4rem $darkgrey;
 }
 
 .header__logo {
@@ -34,5 +38,11 @@
   height: 24rem;
   padding: 0 16rem;
   white-space: nowrap;
+  border-radius: 12rem;
   cursor: pointer;
+
+  &--active {
+    color: $white;
+    background-color: $red;
+  }
 }
