@@ -8,3 +8,22 @@ html {
   font-optical-sizing: auto;
   user-select: none;
 }
+
+.main {
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: calc(100vh - 80rem);
+  padding: 16rem;
+  font-size: 100px;
+  background-color: $white;
+  transition: top 500ms ease-in-out 200ms;
+
+  &:not(:first-child) {
+    position: absolute;
+    top: 100%;
+  }
+}
