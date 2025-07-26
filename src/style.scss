@@ -20,10 +20,12 @@ html {
   padding: 16rem;
   font-size: 100px;
   background-color: $white;
+  border-radius: 10px solid black;
   transition: top 500ms ease-in-out 200ms;
 
   &:not(:first-child) {
     position: absolute;
     top: 100%;
+    z-index: 4;
   }
 }
