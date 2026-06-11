@@ -3,7 +3,7 @@
   overflow: hidden;
 
   block-size: min-content;
-  margin-inline: 0;
+  margin-inline: rem(1);
   border-radius: $radius-xl;
 
   background-color: $bg-element;
@@ -23,7 +23,7 @@
   @container (max-width: 480px) {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 3 / 3;
   }
 }
 
@@ -66,9 +66,6 @@
 
 .dance-style__item {
   @include paragraph-bold;
-}
-
-.dance-style__text {
 }
 
 .dance-style__description {
