@@ -3,6 +3,10 @@
 @import '/src/styles/base/fonts';
 @import '/src/styles/blocks/+.css';
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   overflow-x: hidden;
   background-color: $bg-main;

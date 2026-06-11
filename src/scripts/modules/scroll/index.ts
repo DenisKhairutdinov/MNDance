@@ -12,13 +12,14 @@ function initScrolling() {
     return;
   }
 
-  const smoother = ScrollSmoother.create({
-    wrapper: '#smooth-wrapper',
-    content: '#smooth-content',
-    smooth: 1.4,
-    effects: true,
-  });
-
+  if (window.innerWidth > 768) {
+    const smoother = ScrollSmoother.create({
+      wrapper: '#smooth-wrapper',
+      content: '#smooth-content',
+      smooth: 1.4,
+      effects: true,
+    });
+  }
   let isScrolling = false;
   document.addEventListener('click', (event) => {
     const link = (event.target as HTMLElement).closest<HTMLLinkElement>('[data-local-link]');
@@ -29,10 +30,10 @@ function initScrolling() {
     event.preventDefault();
     isScrolling = true;
 
-    const target = link.getAttribute('href');
-    const position = smoother.offset(target, 'top 64px');
+    // const target = link.getAttribute('href');
+    // const position = smoother.offset(target, 'top 64px');
 
-    smoother.scrollTo(position, true);
+    // smoother.scrollTo(position, true);
 
     for (const link of localLinks) {
       const linkText = link.querySelector('span');
@@ -86,7 +87,7 @@ function initScrolling() {
         scrub: true,
         markers: false,
       },
-      x: 100,
+
       opacity: 0,
       duration: 1,
     });
