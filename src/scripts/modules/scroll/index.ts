@@ -24,6 +24,7 @@ function initScrolling() {
     if (isMobile.matches) {
       smoother.kill();
       console.log('kill');
+      ScrollTrigger.refresh();
     } else {
       smoother = ScrollSmoother.create({
         wrapper: '#smooth-wrapper',
