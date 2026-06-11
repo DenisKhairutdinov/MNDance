@@ -12,14 +12,34 @@ function initScrolling() {
     return;
   }
 
-  // if (window.innerWidth > 768) {
-  //   const smoother = ScrollSmoother.create({
-  //     wrapper: '#smooth-wrapper',
-  //     content: '#smooth-content',
-  //     smooth: 1.4,
-  //     effects: true,
-  //   });
-  // }
+  const isMobile = globalThis.matchMedia('(max-width: 768px)');
+  let smoother = ScrollSmoother.create({
+    wrapper: '#smooth-wrapper',
+    content: '#smooth-content',
+    smooth: 1.4,
+    effects: true,
+  });
+
+  function updateSmooth() {
+    if (isMobile.matches) {
+      smoother.kill();
+      console.log('kill');
+    } else {
+      smoother = ScrollSmoother.create({
+        wrapper: '#smooth-wrapper',
+        content: '#smooth-content',
+        smooth: 1.4,
+        effects: true,
+      });
+      console.log(123);
+    }
+  }
+  updateSmooth();
+
+  isMobile.addEventListener('change', () => {
+    updateSmooth();
+  });
+
   let isScrolling = false;
   document.addEventListener('click', (event) => {
     const link = (event.target as HTMLElement).closest<HTMLLinkElement>('[data-local-link]');
@@ -30,10 +50,10 @@ function initScrolling() {
     event.preventDefault();
     isScrolling = true;
 
-    // const target = link.getAttribute('href');
-    // const position = smoother.offset(target, 'top 64px');
+    const target = link.getAttribute('href');
+    const position = smoother.offset(target, 'top 64px');
 
-    // smoother.scrollTo(position, true);
+    smoother.scrollTo(position, true);
 
     for (const link of localLinks) {
       const linkText = link.querySelector('span');
@@ -87,7 +107,7 @@ function initScrolling() {
         scrub: true,
         markers: false,
       },
-
+      x: -200,
       opacity: 0,
       duration: 1,
     });

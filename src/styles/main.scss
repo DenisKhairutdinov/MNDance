@@ -33,10 +33,14 @@ img {
 }
 
 .spacer {
-  block-size: calc(#{$header-height} + #{$footer-height});
+  block-size: $footer-height;
 
   @media (width >= $tablet) {
     block-size: $header-height;
+  }
+
+  @media (width >= $mobile-max) {
+    block-size: calc(#{$header-height} + #{$footer-height});
   }
 }
 
