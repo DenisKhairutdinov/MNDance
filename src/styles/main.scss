@@ -23,6 +23,8 @@ img {
 }
 
 .container {
+  will-change: transform, opacity, translate;
+
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: $xs;
