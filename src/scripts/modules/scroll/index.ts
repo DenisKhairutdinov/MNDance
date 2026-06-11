@@ -12,14 +12,14 @@ function initScrolling() {
     return;
   }
 
-  if (window.innerWidth > 768) {
-    const smoother = ScrollSmoother.create({
-      wrapper: '#smooth-wrapper',
-      content: '#smooth-content',
-      smooth: 1.4,
-      effects: true,
-    });
-  }
+  // if (window.innerWidth > 768) {
+  //   const smoother = ScrollSmoother.create({
+  //     wrapper: '#smooth-wrapper',
+  //     content: '#smooth-content',
+  //     smooth: 1.4,
+  //     effects: true,
+  //   });
+  // }
   let isScrolling = false;
   document.addEventListener('click', (event) => {
     const link = (event.target as HTMLElement).closest<HTMLLinkElement>('[data-local-link]');
