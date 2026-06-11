@@ -7,7 +7,7 @@
   padding-block: clamp(rem(88), 4.231rem + 5.641vw, rem(176)) $sm;
   padding-inline: $xs;
 
-  transition: block-size $medium $ease-out;
+  transition: block-size 1s $ease-out;
 
   @media (width >= $tablet) {
     block-size: calc(100dvh - #{$header-height});

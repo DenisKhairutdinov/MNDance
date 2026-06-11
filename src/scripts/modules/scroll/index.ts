@@ -23,7 +23,6 @@ function initScrolling() {
   function updateSmooth() {
     if (isMobile.matches) {
       smoother.kill();
-      console.log('kill');
       ScrollTrigger.refresh();
     } else {
       smoother = ScrollSmoother.create({
@@ -32,7 +31,6 @@ function initScrolling() {
         smooth: 1.4,
         effects: true,
       });
-      console.log(123);
     }
   }
   updateSmooth();
@@ -105,7 +103,7 @@ function initScrolling() {
         trigger: section,
         start: 'top 80%',
         end: 'center center',
-        scrub: true,
+        // scrub: true,
         markers: false,
       },
       x: -200,
