@@ -1,0 +1,7 @@
+import './carousel/+.js'
+import './global/+.js'
+import './menu/+.js'
+import './modals/+.js'
+import './scroll/+.js'
+import './team/+.js'
+import './timetable/+.js'

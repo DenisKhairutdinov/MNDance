@@ -1,0 +1,23 @@
+.join-modal {
+  @include base-modal;
+
+  margin-inline: auto;
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.join-modal__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-block-end: $md;
+  border-block-end: 1px solid $bg-element-alt-dark;
+}
+
+.join-modal__title {
+  @include heading-3;
+}

@@ -1,0 +1,20 @@
+.logo {
+  outline: none;
+
+  &:hover,
+  &:focus-visible {
+    .logo__icon {
+      fill: $accent;
+    }
+  }
+}
+
+.logo__icon {
+  width: rem(112);
+  height: rem(44);
+  margin-block-start: $base;
+
+  fill: $primary;
+
+  transition: fill $fast $ease-out;
+}

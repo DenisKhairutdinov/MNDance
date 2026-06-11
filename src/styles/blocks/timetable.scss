@@ -1,0 +1,215 @@
+.timetable {
+  overflow: hidden;
+  grid-template-rows: auto 1fr auto;
+}
+
+.timetable__title {
+  @include heading-2;
+
+  grid-column: 1 / 13;
+  margin-block-end: calc(#{$base} * 12);
+  padding-inline: $md;
+}
+
+.table {
+  position: relative;
+
+  display: grid;
+  grid-column: 1 / 13;
+  grid-template-columns: 1fr 3fr;
+
+  max-block-size: rem(576);
+  margin-block-end: $xs;
+  padding-inline-end: calc(#{$xs} / 2);
+
+  @media (width >= $mobile-max) {
+    grid-template-columns: 1fr 6fr;
+  }
+}
+
+.table__times {
+  position: relative;
+  z-index: 2;
+
+  display: grid;
+  grid-template-rows: auto repeat(4, 1fr);
+  gap: $xs;
+
+  padding-inline: $xs calc(#{$xs} / 2);
+
+  background-color: $bg-main;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    translate: 0 rem(-4);
+
+    inline-size: 100%;
+    block-size: rem(8);
+
+    background-color: $bg-main;
+  }
+}
+
+.table__time {
+  @include centering;
+  @include paragraph-bold;
+
+  padding-block: $static-xs;
+  border-radius: $radius-md;
+  background-color: $secondary;
+  box-shadow: $shadow-sm;
+
+  &:last-child {
+    margin-block-end: $static-base;
+  }
+}
+
+.empty {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.table__wrapper {
+  position: relative;
+
+  inline-size: calc(200% + #{$xs} / 8);
+  margin-block-end: $static-base;
+  padding-inline: calc(#{$xs} / 2);
+
+  transition: translate $slow $ease-out;
+
+  &--end {
+    translate: calc(-50% - #{$xs} / 16) 0;
+  }
+
+  @media (width >= $mobile-max) {
+    inline-size: 100%;
+
+    &--end {
+      translate: 0 0;
+    }
+  }
+}
+
+.table__rows {
+  display: grid;
+  grid-template-rows: auto repeat(4, 1fr);
+  gap: $xs;
+  block-size: 100%;
+}
+
+.table__days {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: $xs;
+}
+
+.table__day {
+  @include centering;
+  @include paragraph-bold;
+
+  padding-block: $static-xs;
+  border-radius: $radius-sm;
+  background-color: $secondary;
+  box-shadow: $shadow-sm;
+}
+
+.table__cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: $xs;
+  block-size: 100%;
+}
+
+.table__card {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  padding: $static-xs;
+  border-radius: $radius-md;
+
+  background-color: $bg-element-alt-light;
+  box-shadow: $shadow-sm;
+}
+
+.table__card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.table__style {
+  @include paragraph-bold;
+
+  font-size: clamp(0.75rem, 0.643rem + 0.476vw, 1rem);
+  line-height: clamp(1.25rem, 1.143rem + 0.476vw, 1.5rem);
+}
+
+.table__info {
+  @include paragraph;
+
+  font-size: clamp(0.875rem, 0.821rem + 0.238vw, 1rem);
+  line-height: clamp(1.25rem, 1.143rem + 0.476vw, 1.5rem);
+}
+
+.split-line {
+  width: 100%;
+  height: 2px;
+  margin-block: rem(2);
+  background-color: $bg-element-alt-dark;
+}
+
+.timetable__annotation {
+  display: grid;
+  grid-column: 1 / 13;
+  grid-template-columns: min-content min-content;
+  column-gap: $xs;
+
+  margin-inline: auto;
+  padding-inline: $md;
+}
+
+.timetable__text {
+  @include paragraph;
+
+  font-size: rem(14);
+  white-space: nowrap;
+}
+
+.timetable__controls {
+  display: flex;
+  grid-column: 1 /13;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  margin-block-start: $xs;
+  padding-inline: $xs;
+
+  @media (width >= $mobile-max) {
+    display: none;
+  }
+}
+
+.timetable__dots {
+  display: flex;
+  flex-direction: row;
+  column-gap: $xs;
+  margin-inline: $md;
+}
+
+.timetable__dot {
+  inline-size: rem(24);
+  block-size: rem(3);
+  border-radius: 2px;
+
+  background-color: $bg-element-alt-light;
+
+  transition: background-color $fast $ease-out;
+
+  &--is-active {
+    background-color: $accent;
+  }
+}

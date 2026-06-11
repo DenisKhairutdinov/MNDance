@@ -1,0 +1,18 @@
+{% set pageTitle = "MNDance | студия танцев" %}
+{% extends "layout.njk" %}
+
+{% block content %}
+  {% include "hero.njk" %}
+  {% include "about.njk" %}
+  {% include "dance-styles.njk" %}
+  {% include "team.njk" %}
+  {% include "timetable.njk" %}
+  {% include "price.njk" %}
+  {% include "contacts.njk" %}
+
+  <!-- modals  -->
+  {% include "policy-modal.njk" %}
+  {% include "rules-modal.njk" %}
+  {% include "join-modal.njk" %}
+  <div class="spacer"></div>
+{% endblock %}

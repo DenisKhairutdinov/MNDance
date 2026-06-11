@@ -1,0 +1,56 @@
+<dialog
+  id="join-modal"
+  class="join-modal"
+  aria-labelledby="join-modal__title"
+  data-modal
+  data-sub-event="join-modal: open-request"
+  data-pub-event="join-modal: close"
+>
+  <header class="join-modal__header">
+    <h2 class="join-modal__title">Запись</h2>
+    <button
+      class="close-button"
+      type="button"
+      aria-label="Закрыть окно"
+      data-event-button
+      data-pub-event="join-modal: open-request"
+    >
+      <svg class="close-button__icon" aria-hidden="true">
+        <use href="#icon-close"></use>
+      </svg>
+    </button>
+  </header>
+
+  <form action="#" class="join-form">
+    <div class="form-group">
+      <label for="style-select">Стиль танца</label>
+      <select name="style" id="style-select">
+        <option value="house">Хаус</option>
+        <option value="contemp">Контемп</option>
+        <option value="breakdance">Брейкданс</option>
+        <option value="popping">Поппинг</option>
+        <option value="hip-hop">Хип-хоп</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="user-name"> Ваше имя <span aria-hidden="true">*</span> </label>
+      <input type="text" id="user-name" name="username" required placeholder="Имя" />
+    </div>
+
+    <div class="form-group">
+      <label for="user-phone"> Номер телефона <span aria-hidden="true">*</span> </label>
+      <input
+        type="tel"
+        id="user-phone"
+        name="phone"
+        required
+        aria-required="true"
+        autocomplete="tel"
+        placeholder="8 (999) 123-45-67"
+      />
+    </div>
+
+    <button type="submit">Отправить</button>
+  </form>
+</dialog>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>{{ pageTitle }}</title>
+    <meta
+      name="description"
+      content="Школа танцев MNDance в Челябинске. Танцы для взрослых и детей. Первое занятие бесплатно. Записывайтесь онлайн!"
+    />
+    <meta property="og:title" content="MNDance — студия танцев в Челябинске" />
+    <meta property="og:description" content="Первое занятие бесплатно. Записывайтесь!" />
+    <meta property="og:image" content="#" />
+    <meta property="og:url" content="#" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <div id="smooth-wrapper">
+      {% include "header.njk" %}
+      <main class="main" id="smooth-content">{% block content %}{% endblock %}</main>
+      {% include "footer.njk" %}
+    </div>
+    <script type="module" src="/src/scripts/main.ts"></script>
+  </body>
+</html>

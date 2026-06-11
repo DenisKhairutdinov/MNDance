@@ -1,0 +1,212 @@
+@use '/src/styles/base/vars' as *;
+@use '/src/styles/base/functions' as *;
+
+// Fonts
+@mixin heading-1 {
+  font-family: Bounded, sans-serif;
+  font-size: clamp(rem(40), 2.212rem + 1.282vw, rem(60));
+  font-weight: 566;
+  line-height: clamp(rem(48), 2.712rem + 1.282vw, rem(68));
+  letter-spacing: rem(-1.5);
+}
+
+@mixin heading-2 {
+  font-family: Bounded, sans-serif;
+  font-size: clamp(rem(30), 1.615rem + 1.154vw, rem(48));
+  font-weight: 566;
+  line-height: clamp(rem(40), 2.327rem + 0.769vw, rem(52));
+  letter-spacing: rem(-1);
+}
+
+@mixin heading-3 {
+  font-family: Bounded, sans-serif;
+  font-size: rem(24);
+  font-weight: 566;
+  line-height: rem(28);
+  letter-spacing: rem(-1);
+}
+
+@mixin heading-4 {
+  font-family: Bounded, sans-serif;
+  font-size: rem(20);
+  font-weight: 566;
+  line-height: rem(24);
+  letter-spacing: rem(0);
+}
+
+@mixin paragraph-large {
+  font-family: IdealistSans, sans-serif;
+  font-size: clamp(rem(16), 0.942rem + 0.256vw, rem(20));
+  font-weight: 400;
+  line-height: clamp(rem(24), 1.385rem + 0.513vw, rem(32));
+  letter-spacing: rem(0);
+}
+
+@mixin paragraph {
+  font-family: IdealistSans, sans-serif;
+  font-size: rem(16);
+  font-weight: 400;
+  line-height: rem(24);
+  letter-spacing: rem(0);
+}
+
+@mixin paragraph-bold {
+  font-family: Bounded, sans-serif;
+  font-size: rem(16);
+  font-weight: 566;
+  line-height: rem(24);
+  letter-spacing: rem(0);
+}
+
+@mixin paragraph-small {
+  font-family: IdealistSans, sans-serif;
+  font-size: rem(14);
+  font-weight: 400;
+  line-height: rem(20);
+  letter-spacing: rem(0);
+}
+
+@mixin paragraph-small-bold {
+  font-family: Bounded, sans-serif;
+  font-size: rem(14);
+  font-weight: 566;
+  line-height: rem(20);
+  letter-spacing: rem(0);
+}
+
+// Buttons
+@mixin base-button {
+  @include paragraph-small;
+  @include centering;
+
+  cursor: pointer;
+
+  column-gap: $static-xs;
+
+  inline-size: max-content;
+  block-size: max-content;
+  padding-block: $static-xs-sm;
+  padding-inline: $static-md;
+  border: none;
+  border-radius: $radius-sm;
+
+  color: $primary;
+
+  background-color: $bg-element-alt-light;
+  outline: none;
+  box-shadow: $shadow-md;
+
+  transition:
+    translate $fast $ease-out,
+    box-shadow $fast $ease-out;
+
+  & svg {
+    width: rem(16);
+    height: rem(16);
+    fill: $primary;
+  }
+
+  &:hover,
+  &:focus-visible {
+    translate: 0 rem(2);
+    box-shadow: $shadow-sm;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $accent;
+    outline-offset: 2px;
+  }
+}
+
+@mixin accent-button {
+  color: $secondary;
+  background-color: $accent;
+
+  & svg {
+    fill: $secondary;
+  }
+}
+
+@mixin large-button {
+  @include paragraph;
+
+  block-size: rem(48);
+  padding-block: $static-sm;
+  padding-inline: $static-xl;
+}
+
+@mixin icon-button {
+  padding: $static-sm;
+}
+
+@mixin small-icon-button {
+  padding: $static-xs;
+}
+
+@mixin link-button {
+  @include paragraph;
+
+  padding: 0;
+
+  text-decoration: underline;
+
+  background-color: transparent;
+  box-shadow: none;
+
+  transition: color $fast $ease-out;
+
+  &:hover,
+  &:focus-visible {
+    translate: 0 rem(0);
+    color: $accent;
+    box-shadow: none;
+  }
+}
+
+@mixin reset-button {
+  cursor: pointer;
+
+  margin: 0;
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+}
+
+// Modals
+@mixin base-modal {
+  translate: 0 0;
+
+  padding: $md;
+  border: none;
+  border-radius: $radius-xxl;
+
+  opacity: 1;
+  background-color: $bg-main;
+  filter: blur(0);
+
+  transition:
+    opacity $medium $ease-out,
+    translate $medium $ease-out,
+    filter $medium $ease-out;
+
+  &::backdrop {
+    background-color: $backdrop;
+    backdrop-filter: blur(4px);
+  }
+
+  @starting-style {
+    &[open] {
+      translate: 0 rem(-20);
+      opacity: 0;
+      filter: blur(4px);
+    }
+  }
+}
+
+// Other
+@mixin centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

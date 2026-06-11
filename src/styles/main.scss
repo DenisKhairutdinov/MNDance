@@ -1,0 +1,45 @@
+@import 'modern-css-reset/dist/reset.css';
+
+@import '/src/styles/base/fonts';
+@import '/src/styles/blocks/+.css';
+
+body {
+  overflow-x: hidden;
+  background-color: $bg-main;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+svg,
+img {
+  display: block;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: $xs;
+
+  max-inline-size: calc(rem(1184) + #{$md} * 2);
+  margin-inline: auto;
+  padding-block: calc(#{$base} * 10);
+}
+
+.spacer {
+  block-size: calc(#{$header-height} + #{$footer-height});
+
+  @media (width >= $tablet) {
+    block-size: $header-height;
+  }
+}
+
+.bold {
+  @include paragraph-bold;
+}
+
+.accent {
+  color: $accent;
+}

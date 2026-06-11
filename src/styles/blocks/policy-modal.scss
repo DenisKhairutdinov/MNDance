@@ -1,0 +1,59 @@
+.policy {
+  @include base-modal;
+
+  overflow: hidden;
+  max-inline-size: rem(1200);
+  margin: $xs;
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (width >= calc(#{$tablet} + #{$xs} * 2)) {
+    max-block-size: 80vh;
+    margin: auto;
+  }
+}
+
+.policy__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-block-end: $md;
+  border-block-end: 1px solid $bg-element-alt-dark;
+}
+
+.policy__wrapper {
+  overflow-y: auto;
+  padding-block-start: $sm;
+  padding-inline-end: $sm;
+}
+
+.policy__title {
+  @include heading-3;
+}
+
+.policy__subtitle {
+  @include heading-4;
+
+  margin-block-end: $xs;
+}
+
+.policy__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: $static-base;
+
+  margin-block-end: $sm;
+  padding-inline-start: $sm;
+}
+
+.policy__item {
+  @include paragraph;
+}
+
+.policy__text {
+  @include paragraph;
+}

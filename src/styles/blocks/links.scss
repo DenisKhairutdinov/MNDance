@@ -1,0 +1,15 @@
+.phone-link {
+  @include base-button;
+
+  text-decoration: none;
+
+  &--icon-only {
+    @include icon-button;
+  }
+}
+
+.mail-link {
+  @include base-button;
+
+  text-decoration: none;
+}
