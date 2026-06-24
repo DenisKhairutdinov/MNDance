@@ -1,0 +1,67 @@
+@use '/src/styles/base/functions' as *;
+
+// Colors
+$bg-main: #f8fafcff;
+$bg-element: #ffff;
+$bg-element-alt-light: #e6e6e6ff;
+$bg-element-alt-dark: #d9d9d9ff;
+$primary: #171717ff;
+$secondary: #ffff;
+$backdrop: #171717cc;
+$accent: #fb7663ff;
+$backdrop-grad: linear-gradient(#17171700 0%, #171717cc 100%);
+$grad: linear-gradient(to bottom, $bg-element-alt-dark 0%, $bg-element-alt-light 100%);
+
+// Dynamic spacing
+$base: clamp(rem(4), 0.141rem + 0.486cqw, rem(8));
+$xs: calc(#{$base} * 2); // 8
+$sm: calc(#{$base} * 3); // 12
+$md: calc(#{$base} * 4); // 16
+$lg: calc(#{$base} * 5); // 20
+$xl: calc(#{$base} * 6); // 24
+$xxl: calc(#{$base} * 8); // 32
+
+// Static spacing
+$static-base: rem(4);
+$static-xs: rem(8);
+$static-xs-sm: rem(10);
+$static-sm: rem(12);
+$static-md: rem(16);
+$static-lg: rem(20);
+$static-xl: rem(24);
+$static-xxl: rem(32);
+
+// Radius
+$radius-xs: rem(8);
+$radius-sm: rem(12);
+$radius-md: rem(16);
+$radius-xl: rem(24);
+$radius-xxl: rem(32);
+
+// Shadow
+$shadow-sm:
+  rem(0) rem(1) rem(2) #0000001a,
+  rem(0) rem(1) rem(3) #0000001a;
+$shadow-sm-top:
+  rem(0) rem(-1) rem(2) #0000001a,
+  rem(0) rem(-1) rem(3) #0000001a;
+$shadow-md:
+  rem(0) rem(2) rem(4) #0000001a,
+  rem(0) rem(4) rem(6) #0000001a;
+
+// Other
+$header-height: rem(64);
+$footer-height: rem(80);
+
+// Animations
+$fast: 150ms;
+$medium: 250ms;
+$slow: 500ms;
+$ease-out: cubic-bezier(0, 0.55, 0.45, 1);
+
+// Breakpoints
+$tablet: 1200px;
+$tablet-min: 1024px;
+$mobile-max: 768px;
+$mobile: 576px;
+$small-height: 780px;

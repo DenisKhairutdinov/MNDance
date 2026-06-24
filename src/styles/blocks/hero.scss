@@ -1,0 +1,114 @@
+.hero {
+  position: relative;
+
+  inline-size: 100%;
+  block-size: calc(100svh - #{$header-height} - #{$footer-height});
+  padding-block: clamp(rem(88), 4.231rem + 5.641vw, rem(176)) $sm;
+  padding-inline: $xs;
+
+  @media (width >= $tablet) {
+    block-size: calc(100dvh - #{$header-height});
+    max-block-size: rem(1000);
+  }
+}
+
+.hero__background {
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: $radius-xl;
+  background-image: $grad;
+}
+
+.hero__wrapper {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 50%;
+  translate: -50% 0;
+
+  container-type: inline-size;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+
+  inline-size: 100%;
+  max-inline-size: calc(rem(1184) + #{$md} * 2);
+  block-size: 100%;
+  padding-block: clamp(rem(12), -0.058rem + 3.59vw, rem(68))
+    clamp(rem(24), 0.635rem + 3.846vw, rem(84));
+  padding-inline: $md;
+
+  @media (width >= $tablet) {
+    grid-template-rows: auto calc(152 / 476 * 1fr) calc(168 / 476 * 1fr) calc(154 / 476 * 1fr) auto; // 152-168-154-476 values ​​are calculated according to the layout
+  }
+}
+
+.hero__slogan {
+  @include heading-1;
+
+  @media (height < $small-height) {
+    font-size: rem(40);
+    line-height: rem(44);
+  }
+}
+
+.hero__title-wrapper {
+  position: relative;
+  z-index: 2;
+
+  display: inline-block;
+  align-self: center;
+  order: 1;
+
+  max-inline-size: rem(280);
+
+  @media (width >= $tablet) {
+    order: 0;
+    max-inline-size: rem(440);
+  }
+
+  @media (height < $small-height) {
+    max-inline-size: rem(400);
+    font-size: rem(16);
+    line-height: rem(24);
+  }
+}
+
+.hero__title,
+.hero__subtitle {
+  @include paragraph-large;
+
+  display: inline;
+}
+
+.hero__image {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+
+  min-width: 0;
+  block-size: 100%;
+  min-height: 0;
+  padding-block-start: clamp(rem(0), 7.903rem + -10.68vw, rem(88));
+
+  object-fit: cover;
+}
+
+.hero__join-button {
+  display: none;
+  align-self: center;
+
+  @media (width >= $tablet) {
+    display: flex;
+  }
+
+  @media (height >= $small-height) {
+    @include large-button;
+  }
+}
+
+.hero__socials.hero__socials {
+  display: none;
+
+  @media (width >= $tablet) {
+    display: flex;
+  }
+}

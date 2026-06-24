@@ -1,0 +1,87 @@
+@import 'modern-css-reset/dist/reset.css';
+
+@import '/src/styles/base/fonts';
+@import '/src/styles/blocks/+.css';
+
+html {
+  user-select: none;
+  scroll-behavior: smooth;
+  scrollbar-gutter: stable;
+
+  &:has(dialog:modal) {
+    overflow: hidden;
+  }
+}
+
+body {
+  background-color: $bg-main;
+}
+
+#smooth-wrapper {
+  position: relative;
+  inset: auto;
+
+  overflow: visible;
+
+  width: 100%;
+  height: 100%;
+}
+
+#smooth-content {
+  overflow: visible;
+  box-sizing: border-box;
+  width: 100%;
+  padding-block-start: $header-height;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+svg,
+img {
+  display: block;
+}
+
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  will-change: transform, opacity, translate;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  column-gap: $xs;
+
+  max-inline-size: calc(rem(1184) + #{$md} * 2);
+  margin-inline: auto;
+  padding-block: calc(#{$base} * 10);
+}
+
+// .spacer {
+//   block-size: $footer-height;
+
+//   @media (width >= $mobile-max) {
+//     block-size: calc(#{$header-height} + #{$footer-height});
+//   }
+
+//   @media (width >= $tablet) {
+//     block-size: $footer-height;
+//   }
+// }
+
+.bold {
+  @include paragraph-bold;
+}
+
+.accent {
+  color: $accent;
+}

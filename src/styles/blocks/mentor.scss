@@ -1,0 +1,154 @@
+.mentor {
+  cursor: pointer;
+
+  position: relative;
+
+  overflow: hidden;
+
+  aspect-ratio: 5 / 3;
+  border-radius: $radius-xl;
+
+  color: $secondary;
+
+  background-color: $bg-element-alt-dark;
+  box-shadow: $shadow-sm;
+
+  -webkit-tap-highlight-color: transparent;
+
+  @media (hover: hover) {
+    &:hover .mentor__button {
+      & svg {
+        fill: $accent;
+      }
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active .mentor__button {
+      scale: 0.94;
+      opacity: 0.8;
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active .mentor__button {
+      scale: 0.94;
+      opacity: 0.8;
+    }
+  }
+
+  @media (width >= $mobile) {
+    aspect-ratio: 1 / 1;
+  }
+
+  @media (width >= $mobile-max) {
+    aspect-ratio: 5 / 3;
+  }
+
+  @media (width >= $tablet-min) {
+    aspect-ratio: 1 / 1;
+  }
+
+  @media (width >= $tablet) {
+    aspect-ratio: 5 / 3;
+  }
+}
+
+.mentor__image {
+  position: absolute;
+  inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+
+  @media (width >= $mobile) {
+    inline-size: auto;
+    block-size: 100%;
+  }
+
+  @media (width >= $mobile-max) {
+    inline-size: 100%;
+    block-size: auto;
+  }
+
+  @media (width >= $tablet-min) {
+    inline-size: auto;
+    block-size: 100%;
+  }
+
+  @media (width >= $tablet) {
+    inline-size: 100%;
+    block-size: auto;
+  }
+}
+
+.mentor__info {
+  translate: 0 calc(100% - rem(88) - #{$static-xs} * 2); // 88 - title height
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  block-size: 100%;
+  padding: $static-sm;
+
+  background-image: $backdrop-grad;
+
+  transition:
+    translate $slow $ease-out,
+    visibility $slow $ease-out;
+
+  &--is-active {
+    translate: 0 0;
+  }
+}
+
+.mentor__name-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: $static-base;
+}
+
+.mentor__name {
+  @include heading-4;
+}
+
+.mentor__dance-style {
+  @include paragraph;
+}
+
+.mentor__text {
+  @include paragraph;
+
+  align-self: end;
+}
+
+.mentor__button {
+  @include reset-button;
+
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+
+  border-radius: $radius-xl;
+
+  transition: opacity $fast $ease-out;
+
+  & svg {
+    transition: fill $medium $ease-out;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    & svg {
+      fill: $accent;
+    }
+  }
+}
+
+.mentor__icon {
+  width: rem(24);
+  height: rem(24);
+  margin: $static-md;
+  fill: $secondary;
+}

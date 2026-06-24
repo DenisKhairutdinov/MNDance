@@ -1,0 +1,71 @@
+.join-button {
+  @include base-button;
+  @include accent-button;
+}
+
+.menu-button {
+  @include base-button;
+  @include icon-button;
+
+  &--is-active {
+    translate: 0 rem(2);
+    background-color: $accent;
+    box-shadow: $shadow-sm;
+
+    & svg {
+      fill: $secondary;
+    }
+  }
+}
+
+.close-button {
+  @include base-button;
+  @include small-icon-button;
+}
+
+.rules-button,
+.policy-button {
+  @include base-button;
+
+  @include link-button;
+}
+
+.carousel-button {
+  @include base-button;
+  @include small-icon-button;
+
+  display: inline-block;
+  margin-inline-end: $static-base;
+  background-color: $primary;
+
+  & svg {
+    rotate: 90deg;
+  }
+}
+
+.next-button,
+.prev-button {
+  @include base-button;
+  @include small-icon-button;
+
+  pointer-events: none;
+  translate: 0 rem(2);
+  background-color: $bg-element-alt-light;
+  box-shadow: $shadow-sm;
+
+  & svg {
+    fill: $primary;
+    transition: fill $medium $ease-out;
+  }
+
+  &--is-active {
+    pointer-events: all;
+    translate: 0 0;
+    background-color: $primary;
+    box-shadow: $shadow-md;
+
+    & svg {
+      fill: $secondary;
+    }
+  }
+}

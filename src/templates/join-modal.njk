@@ -1,0 +1,186 @@
+<dialog
+  id="join-modal"
+  class="join-modal"
+  aria-labelledby="join-modal__title"
+  data-modal
+  data-join-modal
+  data-sub-event="join-modal: open-request"
+  data-pub-event="join-modal: close"
+>
+  <div class="join-modal__main-screen join-modal__main-screen--is-active" data-join-modal-screen>
+    <header class="join-modal__header">
+      <h2 class="join-modal__title">Запись</h2>
+      <button
+        class="close-button"
+        type="button"
+        aria-label="Закрыть окно"
+        data-event-button
+        data-pub-event="join-modal: open-request"
+      >
+        <svg class="close-button__icon" aria-hidden="true">
+          <use href="#icon-close"></use>
+        </svg>
+      </button>
+    </header>
+    <form action="#" method="POST" class="join-form" novalidate data-form>
+      <div class="join-form__group">
+        <label class="join-form__label" for="style-select">Стиль</label>
+        <div id="style-select" class="style-select" data-style-select>
+          <button
+            class="style-select__button"
+            type="button"
+            aria-haspopup="listbox"
+            aria-expanded="false"
+            data-style-select-button
+          >
+            <span class="style-select__button-text">Cтиль</span>
+            <svg class="style-select__button-icon" aria-hidden="true">
+              <use href="#icon-arrow-next"></use>
+            </svg>
+          </button>
+          <ul
+            class="style-select__options"
+            role="listbox"
+            aria-hidden="true"
+            data-style-select-options
+          >
+            <li
+              class="style-select__option"
+              role="option"
+              data-value="house"
+              tabindex="0"
+              data-style-select-option
+            >
+              <span class="style-select__text">Хаус</span>
+            </li>
+            <li
+              class="style-select__option"
+              role="option"
+              data-value="contemp"
+              tabindex="0"
+              data-style-select-option
+            >
+              <span class="style-select__text">Контемп</span>
+            </li>
+            <li
+              class="style-select__option"
+              role="option"
+              data-value="breakdance"
+              tabindex="0"
+              data-style-select-option
+            >
+              <span class="style-select__text">Брейкданс</span>
+            </li>
+            <li
+              class="style-select__option"
+              role="option"
+              data-value="popping"
+              tabindex="0"
+              data-style-select-option
+            >
+              <span class="style-select__text">Поппинг</span>
+            </li>
+            <li
+              class="style-select__option"
+              role="option"
+              data-value="hip-hop"
+              tabindex="0"
+              data-style-select-option
+            >
+              <span class="style-select__text">Хип-хоп</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="join-form__group">
+        <label class="join-form__label" for="user-name">Имя</label>
+        <input
+          class="join-form__input"
+          type="text"
+          id="user-name"
+          name="username"
+          required
+          placeholder="Имя"
+          data-name-input
+          aria-describedby="name-error-value"
+          aria-invalid="false"
+        />
+      </div>
+
+      <div class="join-form__group">
+        <label class="join-form__label" for="user-phone">Номер телефона </label>
+        <input
+          class="join-form__input join-form__input--value-error"
+          type="tel"
+          id="user-phone"
+          name="phone"
+          required
+          aria-required="true"
+          autocomplete="tel"
+          placeholder="+7 (999) 123-45-67"
+          data-tel-input
+          aria-describedby="name-error-value name-error-format"
+          aria-invalid="false"
+        />
+      </div>
+      <div class="join-form__errors">
+        <p
+          id="name-error-value"
+          class="join-form__error join-form__error--value"
+          role="alert"
+          data-form-error-value
+        >
+          * Обязательное поле
+        </p>
+        <p
+          id="name-error-format"
+          class="join-form__error join-form__error--format"
+          role="alert"
+          data-form-error-format
+        >
+          ** Неверный формат
+        </p>
+      </div>
+
+      <button
+        class="join-form__button"
+        type="submit"
+        aria-live="polite"
+        aria-busy="false"
+        data-form-button
+      >
+        Отправить
+      </button>
+
+      <div class="join-form__policy">
+        <p class="join-form__text">Отправляя форму, Вы принимаете</p>
+        <button
+          class="policy-button"
+          type="button"
+          data-event-button
+          data-pub-event="policy-modal: open-request"
+          data-sub-event="policy-modal: close"
+        >
+          Политику конфиденциальности
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="join-modal__submitted-screen" data-join-modal-screen>
+    <p class="join-modal__submitted-alert">Вы на шаг ближе<br />к танцполу!</p>
+    <p class="join-modal__submitted-text">
+      Спасибо за запись! Наш администратор свяжется с Вами в ближайшее время, чтобы согласовать всё
+      необходимое.
+    </p>
+    <button
+      class="join-modal__submitted-button"
+      type="button"
+      aria-label="Закрыть окно"
+      data-event-button
+      data-pub-event="join-modal: open-request"
+    >
+      Ок
+    </button>
+  </div>
+</dialog>

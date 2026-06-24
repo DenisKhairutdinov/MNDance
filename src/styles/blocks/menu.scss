@@ -1,0 +1,160 @@
+.menu {
+  & .socials {
+    align-self: center;
+    margin-block-end: $xs;
+
+    @media (width >= $mobile) {
+      display: none;
+    }
+  }
+}
+
+.menu__wrapper {
+  position: absolute;
+  inset-block-start: calc(#{$header-height} + #{$xs});
+  inset-inline-end: $md;
+  translate: 0 rem(-20);
+
+  display: flex;
+  flex-direction: column;
+  row-gap: $sm;
+  align-items: center;
+
+  padding-block: $lg;
+  padding-inline: $md;
+  border-radius: $radius-xl;
+
+  visibility: hidden;
+  opacity: 0;
+  background-color: $bg-element;
+  filter: blur(4px);
+  box-shadow: $shadow-sm;
+
+  transition:
+    opacity $fast $ease-out,
+    translate $fast $ease-out,
+    filter $fast $ease-out,
+    visibility $fast $ease-out;
+
+  &--is-active {
+    translate: 0 0;
+
+    visibility: visible;
+    opacity: 1;
+    filter: blur(0);
+
+    transition:
+      opacity $medium $ease-out,
+      translate $medium $ease-out,
+      filter $medium $ease-out,
+      visibility $medium $ease-out;
+  }
+
+  @media (width >= $tablet) {
+    position: static;
+    translate: 0 0;
+
+    padding: 0;
+    border-radius: 0;
+
+    visibility: visible;
+    opacity: 1;
+    background-color: transparent;
+    filter: blur(0);
+    box-shadow: none;
+  }
+
+  @media (width >= $mobile) {
+    row-gap: 0;
+  }
+}
+
+.menu__actions {
+  display: flex;
+  flex-direction: column;
+  row-gap: $xs;
+  align-items: center;
+
+  @media (width >= $tablet) {
+    display: none;
+  }
+}
+
+.menu__button {
+  @media (width >= $tablet) {
+    display: none;
+  }
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: $base $sm;
+  list-style-type: none;
+
+  @media (width >= $tablet) {
+    flex-direction: row;
+  }
+}
+
+.menu__link {
+  @include centering;
+
+  block-size: rem(40);
+  text-decoration: none;
+  outline: none;
+
+  &:focus-visible {
+    .menu__text {
+      background-color: $bg-element-alt-light;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      .menu__text {
+        background-color: $bg-element-alt-light;
+      }
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active {
+      .menu__text {
+        scale: 0.94;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      .menu__text {
+        scale: 0.94;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.menu__text {
+  @include paragraph;
+
+  display: block;
+
+  block-size: min-content;
+  padding-block: $static-base;
+  padding-inline: $static-xs;
+  border-radius: $radius-xs;
+
+  color: $primary;
+
+  transition:
+    background-color $medium $ease-out,
+    opacity $medium $ease-out,
+    scale $medium $ease-out;
+
+  &--is-active {
+    background-color: $bg-element-alt-light;
+  }
+}

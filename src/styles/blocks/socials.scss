@@ -1,0 +1,15 @@
+.socials {
+  display: flex;
+  flex-direction: row;
+  column-gap: $xs;
+  align-self: end;
+}
+
+.socials__link {
+  @include base-button;
+  @include icon-button;
+
+  &--white-bg {
+    background-color: $bg-element;
+  }
+}

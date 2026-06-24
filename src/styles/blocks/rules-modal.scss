@@ -1,0 +1,49 @@
+.rules {
+  @include base-modal;
+
+  overflow: hidden;
+  max-inline-size: rem(1200);
+  margin-inline: $xs;
+
+  &[open] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media (width >= calc(#{$tablet} + #{$xs} * 2)) {
+    max-block-size: 80vh;
+    margin-inline: auto;
+  }
+}
+
+.rules__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-block-end: $md;
+  border-block-end: 1px solid $bg-element-alt-dark;
+}
+
+.rules__title {
+  @include heading-3;
+}
+
+.rules__wrapper {
+  overflow-y: auto;
+  padding-block-start: $sm;
+  padding-inline-end: $sm;
+}
+
+.rules__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: $static-base;
+
+  margin-block-end: $sm;
+  padding-inline-start: $sm;
+}
+
+.rules__item {
+  @include paragraph;
+}

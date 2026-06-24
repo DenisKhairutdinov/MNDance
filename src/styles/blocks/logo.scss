@@ -1,0 +1,48 @@
+.logo {
+  outline: none;
+
+  &:focus-visible {
+    .logo__icon {
+      fill: $accent;
+    }
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      .logo__icon {
+        fill: $accent;
+      }
+    }
+  }
+
+  @media (pointer: fine) {
+    &:active {
+      .logo__icon {
+        scale: 0.98;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  @media (pointer: coarse) {
+    &:active {
+      .logo__icon {
+        scale: 0.98;
+        fill: $accent;
+      }
+    }
+  }
+}
+
+.logo__icon {
+  width: rem(112);
+  height: rem(44);
+  margin-block-start: $base;
+
+  fill: $primary;
+
+  transition:
+    fill $slow $ease-out,
+    scale $slow $ease-out,
+    opacity $slow $ease-out;
+}
