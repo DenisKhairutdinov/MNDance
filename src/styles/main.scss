@@ -66,17 +66,17 @@ textarea {
   padding-block: calc(#{$base} * 10);
 }
 
-// .spacer {
-//   block-size: $footer-height;
+.spacer {
+  block-size: $footer-height;
 
-//   @media (width >= $mobile-max) {
-//     block-size: calc(#{$header-height} + #{$footer-height});
-//   }
+  @media (width >= $mobile-max) {
+    block-size: calc(#{$header-height} + #{$footer-height});
+  }
 
-//   @media (width >= $tablet) {
-//     block-size: $footer-height;
-//   }
-// }
+  @media (width >= $tablet) {
+    block-size: 0;
+  }
+}
 
 .bold {
   @include paragraph-bold;
