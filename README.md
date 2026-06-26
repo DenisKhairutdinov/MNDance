@@ -3,7 +3,7 @@
 
 <img width="3840" height="1912" alt="mndancecover" src="https://github.com/user-attachments/assets/4c1cb9e9-71ff-466e-95b6-dcd52b7fce3e" />
 
-**[MNDance](https://mndance.vercel.app/)**
+**[MNDance](https://deniskhairutdinov.github.io/MNDance/)**
 
 MNDance - лендинг студии танцев, для которого я самостоятельно
 разработал дизайн и реализовал его в коде. Проект создавался с упором на современный
