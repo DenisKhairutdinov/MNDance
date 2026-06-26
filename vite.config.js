@@ -18,6 +18,7 @@ const myTargets = [
 ];
 
 export default defineConfig({
+  base: '/MNDance/',
   plugins: [
     vituum({
       pages: {

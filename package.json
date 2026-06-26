@@ -1,4 +1,5 @@
 {
+  "homepage": "https://DenisKhairutdinov.github.io/MNDance",
   "name": "mndance",
   "private": true,
   "version": "0.0.0",
@@ -15,6 +16,7 @@
     "eslint": "^10.4.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-unicorn": "^64.0.0",
+    "gh-pages": "^6.3.0",
     "globals": "^17.6.0",
     "lightningcss": "^1.32.0",
     "modern-css-reset": "^1.4.0",
