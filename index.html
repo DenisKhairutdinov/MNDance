@@ -32,8 +32,8 @@
       type="font/woff2"
       crossorigin
     />
-    <script type="module" crossorigin src="/MNDance/assets/index.njk-tDWAdrBM.js"></script>
-    <link rel="modulepreload" crossorigin href="/MNDance/assets/main-DzteZ8D9.js">
+    <script type="module" crossorigin src="/MNDance/assets/index.njk-CZ7Jo9az.js"></script>
+    <link rel="modulepreload" crossorigin href="/MNDance/assets/main-CbmWNzxA.js">
     
     <script type="module">import'data:text/javascript,if(!import.meta.resolve)throw Error("import.meta.resolve not supported")';import.meta.url;import("_").catch(()=>1);(async function*(){})().next();window.__vite_is_modern_browser=true</script>
     <script type="module">!function(){if(window.__vite_is_modern_browser)return;console.warn("vite: loading legacy chunks, syntax error above and the same error below should be ignored");var e=document.getElementById("vite-legacy-polyfill"),n=document.createElement("script");n.src=e.src,n.onload=function(){System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))},document.body.appendChild(n)}();</script>
@@ -298,9 +298,9 @@
   </div>
 </section>
 
-  <section id="about" class="about container" data-fade-section>
-  <h2 class="about__title">О нас</h2>
-  <div class="about__wrapper">
+  <section id="about" class="about container">
+  <h2 class="about__title" data-left-fade>О нас</h2>
+  <div class="about__wrapper" data-right-fade>
     <p class="about__text">
       <span class="bold">MNDance</span> - это больше, чем танцевальная школа. Это пространство
       свободы, движения и самовыражения. Мы верим, что танец - это язык, который не требует слов. Он
@@ -333,15 +333,10 @@
   </div>
 </section>
 
-  <section
-  id="dance-styles"
-  class="dance-styles container"
-  data-dance-styles-container
-  data-fade-section
->
-  <h2 class="dance-styles__title">Стили</h2>
+  <section id="dance-styles" class="dance-styles container" data-dance-styles-container>
+  <h2 class="dance-styles__title" data-left-fade>Стили</h2>
 
-  <div class="dance-styles__carousel" data-carousel>
+  <div class="dance-styles__carousel" data-carousel data-right-fade>
     <div class="dance-styles__carousel-viewport" data-carousel-viewport>
       <ul class="dance-styles__list" data-carousel-slides>
         <li class="dance-styles__item" aria-hidden="true" data-index="5" data-carousel-slide>
@@ -585,8 +580,8 @@
                   <li class="dance-style__item">энергия: <span class="accent">5 / 5</span></li>
                 </ul>
                 <p class="dance-style__description">
-                  Много футворка (работа ног), танец под хаус-музыку, требует выносливости и
-                  подвижности. Очень «в теле».
+                  Много футворка (работа ног), танец под хаус-музыку, требует выносливости
+                  и подвижности. Очень «в теле».
                 </p>
               </div>
             </div>
@@ -660,11 +655,11 @@
   </div>
 </section>
 
-  <section id="team" class="team container" data-fade-section>
-  <h2 class="team__title">Команда</h2>
+  <section id="team" class="team container">
+  <h2 class="team__title" data-left-fade>Команда</h2>
   <div class="team__wrapper">
     <ul class="team__list" data-mentors>
-      <li class="team__item team__item--house">
+      <li class="team__item team__item--house" data-team-series-fade>
         <article class="mentor" data-mentor-card>
           <picture class="mentor__image-wrapper">
             <source srcset="/MNDance/assets/house-g732ANPt.webp" type="image/webp" />
@@ -703,7 +698,7 @@
         </article>
       </li>
 
-      <li class="team__item team__item--contemp">
+      <li class="team__item team__item--contemp" data-team-series-fade>
         <article class="mentor" data-mentor-card>
           <picture class="mentor__image-wrapper">
             <source srcset="/MNDance/assets/contemp-84AmkVSt.webp" type="image/webp" />
@@ -742,7 +737,7 @@
         </article>
       </li>
 
-      <li class="team__item team__item--break">
+      <li class="team__item team__item--break" data-team-series-fade>
         <article class="mentor" data-mentor-card>
           <picture class="mentor__image-wrapper">
             <source srcset="/MNDance/assets/breakdance-vaHMY3Ml.webp" type="image/webp" />
@@ -781,7 +776,7 @@
         </article>
       </li>
 
-      <li class="team__item team__item--popping">
+      <li class="team__item team__item--popping" data-team-series-fade>
         <article class="mentor" data-mentor-card>
           <picture class="mentor__image-wrapper">
             <source srcset="/MNDance/assets/popping-BBGVCjIT.webp" type="image/webp" />
@@ -820,7 +815,7 @@
         </article>
       </li>
 
-      <li class="team__item team__item--hip-hop">
+      <li class="team__item team__item--hip-hop" data-team-series-fade>
         <article class="mentor" data-mentor-card>
           <picture class="mentor__image-wrapper">
             <source srcset="/MNDance/assets/hip-hop-CF4zbqoG.webp" type="image/webp" />
@@ -859,7 +854,7 @@
         </article>
       </li>
     </ul>
-    <p class="team__text">
+    <p class="team__text" data-team-series-fade>
       Наши наставники - это сильные <span class="accent">личности, профи</span> своего дела,
       настоящие <span class="accent">фанаты танца</span>. Каждый из них влюблён в свой стиль
       и передаёт эту любовь ученикам.
@@ -867,15 +862,15 @@
   </div>
 </section>
 
-  <section id="timetable" class="timetable container" data-fade-section>
-  <h2 class="timetable__title">Расписание</h2>
+  <section id="timetable" class="timetable container">
+  <h2 class="timetable__title" data-left-fade>Расписание</h2>
   <div class="timetable__table" role="table">
     <div class="timetable__times" role="row">
       <div class="timetable__time timetable__time--empty" aria-hidden="true">-</div>
-      <div class="timetable__time" role="columnheader">17:00</div>
-      <div class="timetable__time" role="columnheader">18:00</div>
-      <div class="timetable__time" role="columnheader">19:00</div>
-      <div class="timetable__time" role="columnheader">20:00</div>
+      <div class="timetable__time" role="columnheader" data-timetable-series-fade>17:00</div>
+      <div class="timetable__time" role="columnheader" data-timetable-series-fade>18:00</div>
+      <div class="timetable__time" role="columnheader" data-timetable-series-fade>19:00</div>
+      <div class="timetable__time" role="columnheader" data-timetable-series-fade>20:00</div>
     </div>
     <div
       id="timetable-wrapper"
@@ -884,34 +879,49 @@
       data-timetable-wrapper
     >
       <div class="timetable__row" role="row">
-        <div class="timetable__day" role="rowheader">Пн</div>
-        <div class="timetable__day" role="rowheader">Вт</div>
-        <div class="timetable__day" role="rowheader">Ср</div>
-        <div class="timetable__day" role="rowheader">Чт</div>
-        <div class="timetable__day" role="rowheader">Пт</div>
-        <div class="timetable__day" role="rowheader">Сб</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Пн</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Вт</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Ср</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Чт</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Пт</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Сб</div>
       </div>
 
       <div class="timetable__row" role="row">
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Контемп</span>
           <span class="timetable__info">н / б</span>
         </div>
-        <div class="timetable__card timetable__card--empty" role="cell" aria-hidden="true"></div>
-        <div class="timetable__card" role="cell">
+        <div
+          class="timetable__card timetable__card--empty"
+          role="cell"
+          data-timetable-series-fade
+          aria-hidden="true"
+        ></div>
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Контемп</span>
           <span class="timetable__info">н / б</span>
         </div>
-        <div class="timetable__card timetable__card--empty" role="cell" aria-hidden="true"></div>
-        <div class="timetable__card" role="cell">
+        <div
+          class="timetable__card timetable__card--empty"
+          role="cell"
+          data-timetable-series-fade
+          aria-hidden="true"
+        ></div>
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Контемп</span>
           <span class="timetable__info">н / б</span>
         </div>
-        <div class="timetable__card timetable__card--empty" role="cell" aria-hidden="true"></div>
+        <div
+          class="timetable__card timetable__card--empty"
+          role="cell"
+          data-timetable-series-fade
+          aria-hidden="true"
+        ></div>
       </div>
 
       <div class="timetable__row" role="row">
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Контемп</span>
             <span class="timetable__info">п / б</span>
@@ -922,11 +932,11 @@
             <span class="timetable__info">н / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Хип-хоп</span>
           <span class="timetable__info">д / б</span>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Контемп</span>
             <span class="timetable__info">п / б</span>
@@ -937,11 +947,11 @@
             <span class="timetable__info">н / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Хип-хоп</span>
           <span class="timetable__info">д / б</span>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Контемп</span>
             <span class="timetable__info">п / б</span>
@@ -952,14 +962,14 @@
             <span class="timetable__info">н / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Хип-хоп</span>
           <span class="timetable__info">д / б</span>
         </div>
       </div>
 
       <div class="timetable__row" role="row">
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Брейк</span>
             <span class="timetable__info">н / б</span>
@@ -970,7 +980,7 @@
             <span class="timetable__info">п / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">н / б</span>
@@ -981,7 +991,7 @@
             <span class="timetable__info">н / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Брейк</span>
             <span class="timetable__info">н / б</span>
@@ -992,7 +1002,7 @@
             <span class="timetable__info">п / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">н / б</span>
@@ -1003,7 +1013,7 @@
             <span class="timetable__info">н / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Брейк</span>
             <span class="timetable__info">н / б</span>
@@ -1014,7 +1024,7 @@
             <span class="timetable__info">п / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">н / б</span>
@@ -1028,11 +1038,11 @@
       </div>
 
       <div class="timetable__row" role="row">
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Брейк</span>
           <span class="timetable__info">п / б</span>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">п / б</span>
@@ -1043,11 +1053,11 @@
             <span class="timetable__info">п / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Брейк</span>
           <span class="timetable__info">п / б</span>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">п / б</span>
@@ -1058,11 +1068,11 @@
             <span class="timetable__info">п / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Брейк</span>
           <span class="timetable__info">п / б</span>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">п / б</span>
@@ -1076,7 +1086,7 @@
       </div>
     </div>
   </div>
-  <div class="timetable__controls" data-timetable-controls>
+  <div class="timetable__controls" data-timetable-controls data-timetable-series-fade>
     <button
       class="prev-button"
       type="button"
@@ -1107,7 +1117,7 @@
       </svg>
     </button>
   </div>
-  <div class="timetable__annotation">
+  <div class="timetable__annotation" data-timetable-series-fade>
     <p class="timetable__text"><span class="bold">д</span> - детская группа</p>
     <p class="timetable__text"><span class="bold">н</span> - начальная группа</p>
     <p class="timetable__text"><span class="bold">п</span> - продвинутая группа</p>
@@ -1116,76 +1126,76 @@
   </div>
 </section>
 
-  <section id="price" class="price container" data-fade-section>
-  <h2 class="price__title" data-title>Цены</h2>
+  <section id="price" class="price container">
+  <h2 class="price__title" data-left-fade>Цены</h2>
   <div class="price__wrapper">
     <ul class="price__list">
-      <li class="price__item">
+      <li class="price__item" data-price-series-fade>
         <div class="price__block">
           <p class="price__value">0 ₽</p>
           <p class="price__service">Пробное<br />занятие</p>
         </div>
       </li>
-      <li class="price__item">
+      <li class="price__item" data-price-series-fade>
         <div class="price__block">
           <p class="price__value">800 ₽</p>
           <p class="price__service">1 занятие</p>
         </div>
       </li>
-      <li class="price__item">
+      <li class="price__item" data-price-series-fade>
         <div class="price__block">
           <p class="price__value">3 000 ₽</p>
           <p class="price__service">4 занятия</p>
         </div>
       </li>
-      <li class="price__item">
+      <li class="price__item" data-price-series-fade>
         <div class="price__block">
           <p class="price__value">8 600 ₽</p>
           <p class="price__service">12 занятий</p>
         </div>
       </li>
-      <li class="price__item">
+      <li class="price__item" data-price-series-fade>
         <div class="price__block">
           <p class="price__value">13 500 ₽</p>
           <p class="price__service">20 занятий</p>
         </div>
       </li>
-      <li class="price__item">
+      <li class="price__item" data-price-series-fade>
         <div class="price__block">
           <p class="price__value">22 000 ₽</p>
           <p class="price__service">40 занятий</p>
         </div>
       </li>
-      <li class="price__item">
+      <li class="price__item" data-price-series-fade>
         <div class="price__block">
           <p class="price__value">2 400 ₽</p>
           <p class="price__service">Full day*</p>
         </div>
       </li>
-      <li class="price__item">
+      <li class="price__item" data-price-series-fade>
         <div class="price__block">
           <p class="price__value">14 000 ₽</p>
           <p class="price__service">Безлимитный<br />абонемент*</p>
         </div>
       </li>
-      <li class="price__item">
+      <li class="price__item" data-price-series-fade>
         <div class="price__block">
           <p class="price__value">3 000 ₽</p>
           <p class="price__service">Персональное<br />занятие</p>
         </div>
       </li>
     </ul>
-    <p class="price__annotation" data-text>
+    <p class="price__annotation" data-text data-price-series-fade>
       * Безлимитные абонементы доступны к покупке только в самой студии. Узнать подробности
       и оформить карту можно у нашего администратора.
     </p>
   </div>
 </section>
 
-  <section id="contacts" class="contacts container" data-fade-section>
-  <h2 class="contacts__title">Контакты</h2>
+  <section id="contacts" class="contacts container">
+  <h2 class="contacts__title" data-contacts-series-fade>Контакты</h2>
   <div class="contacts__wrapper">
-    <address class="contacts__info">
+    <address class="contacts__info" data-contacts-series-fade>
       <span class="contacts__address">г. Челябинск,<br />ул. Клары Цеткин, д. 32</span>
       <a href="tel:+79992450000" class="phone-link" aria-label="Позвонить по номеру 8 999 245 00 00"
         ><svg class="phone-link__icon" aria-hidden="true">
@@ -1236,7 +1246,7 @@
       </span>
     </address>
 
-    <div class="contacts__map">
+    <div class="contacts__map" data-right-fade>
       <div class="contacts__map-wrapper">
         <div class="contacts__map-stub" data-map-stub>
           <div class="contacts__map-backdrop"></div>
@@ -1265,7 +1275,7 @@
       </div>
     </div>
 
-    <div class="contacts__footer">
+    <div class="contacts__footer" data-contacts-series-fade>
       <button
         class="rules-button"
         type="button"
@@ -1796,6 +1806,6 @@
 
     <script nomodule>!function(){var e=document,t=e.createElement("script");if(!("noModule"in t)&&"onbeforeload"in t){var n=!1;e.addEventListener("beforeload",(function(e){if(e.target===t)n=!0;else if(!e.target.hasAttribute("nomodule")||!n)return;e.preventDefault()}),!0),t.type="module",t.src=".",e.head.appendChild(t),t.remove()}}();</script>
     <script nomodule crossorigin id="vite-legacy-polyfill" src="/MNDance/assets/polyfills-legacy-C_L09y8N.js"></script>
-    <script nomodule crossorigin id="vite-legacy-entry" data-src="/MNDance/assets/index.njk-legacy-CgDA8mTt.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
+    <script nomodule crossorigin id="vite-legacy-entry" data-src="/MNDance/assets/index.njk-legacy-z05HABMM.js">System.import(document.getElementById('vite-legacy-entry').getAttribute('data-src'))</script>
   </body>
 </html>
