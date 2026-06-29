@@ -6,9 +6,25 @@ import { dom } from './dom';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 function initScrolling() {
-  const { localLinks, fadeSections } = dom;
+  const {
+    localLinks,
+    leftFadeElements,
+    rightFadeElements,
+    teamFadeElements,
+    contactsFadeElements,
+    priceFadeElements,
+    timetableFadeElements,
+  } = dom;
 
-  if (!localLinks || !fadeSections) {
+  if (
+    !localLinks ||
+    !leftFadeElements ||
+    !rightFadeElements ||
+    !teamFadeElements ||
+    !contactsFadeElements ||
+    !priceFadeElements ||
+    !timetableFadeElements
+  ) {
     return;
   }
 
@@ -103,10 +119,10 @@ function initScrolling() {
     });
   }
 
-  for (const section of fadeSections) {
-    gsap.from(section, {
+  for (const title of leftFadeElements) {
+    gsap.from(title, {
       scrollTrigger: {
-        trigger: section,
+        trigger: title,
         start: 'top 80%',
         end: 'center center',
         // scrub: true,
@@ -117,10 +133,72 @@ function initScrolling() {
       duration: 1,
     });
   }
+
+  for (const element of rightFadeElements) {
+    gsap.from(element, {
+      scrollTrigger: {
+        trigger: element,
+        start: 'top 90%',
+        end: 'center center',
+        // scrub: true,
+        markers: false,
+      },
+      y: 200,
+      opacity: 0,
+      duration: 1,
+    });
+  }
+
+  gsap.from(contactsFadeElements, {
+    y: 200,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.15,
+    scrollTrigger: {
+      trigger: contactsFadeElements[0],
+      start: 'top 80%',
+      once: true,
+      markers: false,
+    },
+  });
+
+  gsap.from(teamFadeElements, {
+    y: 200,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.08,
+    scrollTrigger: {
+      trigger: teamFadeElements[0],
+      start: 'top 80%',
+      once: true,
+      markers: false,
+    },
+  });
+
+  gsap.from(priceFadeElements, {
+    y: 200,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.08,
+    scrollTrigger: {
+      trigger: priceFadeElements[0],
+      start: 'top 80%',
+      once: true,
+      markers: false,
+    },
+  });
+
+  gsap.from(timetableFadeElements, {
+    y: 200,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.02,
+    scrollTrigger: {
+      trigger: timetableFadeElements[0],
+      start: 'top 80%',
+      once: true,
+      markers: false,
+    },
+  });
 }
 initScrolling();
-// window.addEventListener('load', () => {
-//   setTimeout(() => {
-//     initScrolling();
-//   }, 150);
-// });

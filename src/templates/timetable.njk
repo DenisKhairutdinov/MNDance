@@ -1,12 +1,12 @@
-<section id="timetable" class="timetable container" data-fade-section>
-  <h2 class="timetable__title">Расписание</h2>
+<section id="timetable" class="timetable container">
+  <h2 class="timetable__title" data-left-fade>Расписание</h2>
   <div class="timetable__table" role="table">
     <div class="timetable__times" role="row">
       <div class="timetable__time timetable__time--empty" aria-hidden="true">-</div>
-      <div class="timetable__time" role="columnheader">17:00</div>
-      <div class="timetable__time" role="columnheader">18:00</div>
-      <div class="timetable__time" role="columnheader">19:00</div>
-      <div class="timetable__time" role="columnheader">20:00</div>
+      <div class="timetable__time" role="columnheader" data-timetable-series-fade>17:00</div>
+      <div class="timetable__time" role="columnheader" data-timetable-series-fade>18:00</div>
+      <div class="timetable__time" role="columnheader" data-timetable-series-fade>19:00</div>
+      <div class="timetable__time" role="columnheader" data-timetable-series-fade>20:00</div>
     </div>
     <div
       id="timetable-wrapper"
@@ -15,34 +15,49 @@
       data-timetable-wrapper
     >
       <div class="timetable__row" role="row">
-        <div class="timetable__day" role="rowheader">Пн</div>
-        <div class="timetable__day" role="rowheader">Вт</div>
-        <div class="timetable__day" role="rowheader">Ср</div>
-        <div class="timetable__day" role="rowheader">Чт</div>
-        <div class="timetable__day" role="rowheader">Пт</div>
-        <div class="timetable__day" role="rowheader">Сб</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Пн</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Вт</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Ср</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Чт</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Пт</div>
+        <div class="timetable__day" role="rowheader" data-timetable-series-fade>Сб</div>
       </div>
 
       <div class="timetable__row" role="row">
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Контемп</span>
           <span class="timetable__info">н / б</span>
         </div>
-        <div class="timetable__card timetable__card--empty" role="cell" aria-hidden="true"></div>
-        <div class="timetable__card" role="cell">
+        <div
+          class="timetable__card timetable__card--empty"
+          role="cell"
+          data-timetable-series-fade
+          aria-hidden="true"
+        ></div>
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Контемп</span>
           <span class="timetable__info">н / б</span>
         </div>
-        <div class="timetable__card timetable__card--empty" role="cell" aria-hidden="true"></div>
-        <div class="timetable__card" role="cell">
+        <div
+          class="timetable__card timetable__card--empty"
+          role="cell"
+          data-timetable-series-fade
+          aria-hidden="true"
+        ></div>
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Контемп</span>
           <span class="timetable__info">н / б</span>
         </div>
-        <div class="timetable__card timetable__card--empty" role="cell" aria-hidden="true"></div>
+        <div
+          class="timetable__card timetable__card--empty"
+          role="cell"
+          data-timetable-series-fade
+          aria-hidden="true"
+        ></div>
       </div>
 
       <div class="timetable__row" role="row">
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Контемп</span>
             <span class="timetable__info">п / б</span>
@@ -53,11 +68,11 @@
             <span class="timetable__info">н / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Хип-хоп</span>
           <span class="timetable__info">д / б</span>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Контемп</span>
             <span class="timetable__info">п / б</span>
@@ -68,11 +83,11 @@
             <span class="timetable__info">н / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Хип-хоп</span>
           <span class="timetable__info">д / б</span>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Контемп</span>
             <span class="timetable__info">п / б</span>
@@ -83,14 +98,14 @@
             <span class="timetable__info">н / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Хип-хоп</span>
           <span class="timetable__info">д / б</span>
         </div>
       </div>
 
       <div class="timetable__row" role="row">
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Брейк</span>
             <span class="timetable__info">н / б</span>
@@ -101,7 +116,7 @@
             <span class="timetable__info">п / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">н / б</span>
@@ -112,7 +127,7 @@
             <span class="timetable__info">н / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Брейк</span>
             <span class="timetable__info">н / б</span>
@@ -123,7 +138,7 @@
             <span class="timetable__info">п / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">н / б</span>
@@ -134,7 +149,7 @@
             <span class="timetable__info">н / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Брейк</span>
             <span class="timetable__info">н / б</span>
@@ -145,7 +160,7 @@
             <span class="timetable__info">п / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">н / б</span>
@@ -159,11 +174,11 @@
       </div>
 
       <div class="timetable__row" role="row">
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Брейк</span>
           <span class="timetable__info">п / б</span>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">п / б</span>
@@ -174,11 +189,11 @@
             <span class="timetable__info">п / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Брейк</span>
           <span class="timetable__info">п / б</span>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">п / б</span>
@@ -189,11 +204,11 @@
             <span class="timetable__info">п / м</span>
           </div>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <span class="timetable__style">Брейк</span>
           <span class="timetable__info">п / б</span>
         </div>
-        <div class="timetable__card" role="cell">
+        <div class="timetable__card" role="cell" data-timetable-series-fade>
           <div class="timetable__card-wrapper">
             <span class="timetable__style">Хип-хоп</span>
             <span class="timetable__info">п / б</span>
@@ -207,7 +222,7 @@
       </div>
     </div>
   </div>
-  <div class="timetable__controls" data-timetable-controls>
+  <div class="timetable__controls" data-timetable-controls data-timetable-series-fade>
     <button
       class="prev-button"
       type="button"
@@ -238,7 +253,7 @@
       </svg>
     </button>
   </div>
-  <div class="timetable__annotation">
+  <div class="timetable__annotation" data-timetable-series-fade>
     <p class="timetable__text"><span class="bold">д</span> - детская группа</p>
     <p class="timetable__text"><span class="bold">н</span> - начальная группа</p>
     <p class="timetable__text"><span class="bold">п</span> - продвинутая группа</p>
